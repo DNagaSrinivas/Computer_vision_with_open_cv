@@ -1,0 +1,17 @@
+#Stored video
+import cv2
+
+vid = cv2.VideoCapture("C:/Users/Naga srinivas/Videos/Animes/[E15] Blue Lock [360p] [sub].mkv")
+  
+while(True):
+
+    ret, frame = vid.read()
+
+    cv2.imshow('frame', frame)
+      
+    if cv2.waitKey(50) & 0xFF == ord('q'):
+        break
+
+vid.release()
+
+cv2.destroyAllWindows()
